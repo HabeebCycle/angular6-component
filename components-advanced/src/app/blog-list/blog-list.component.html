@@ -1,4 +1,7 @@
+<a class="btn btn-info btn-sm right" (click)="expandAllTiles()">Expand All</a>
+
 <app-blog-post-tile
+  #tiles
   *ngFor="let post of blogPosts[currentPage]"
   [post]="post">
 </app-blog-post-tile>
