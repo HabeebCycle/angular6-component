@@ -6,6 +6,7 @@ import { BlogPostTileComponent } from './blog-post-tile/blog-post-tile.component
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { BlogDataService } from './blog-data.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     BrowserModule
   ],
   providers: [
-    TruncatePipe
+    TruncatePipe,
+    BlogDataService
   ],
   bootstrap: [AppComponent]
 })
