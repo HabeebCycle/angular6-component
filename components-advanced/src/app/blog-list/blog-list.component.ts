@@ -30,4 +30,21 @@ export class BlogListComponent implements OnInit {
     .forEach(e => e.showFullSummary());
   }
 
+  //Search deep for all stack components
+  favoriteAll(){
+    this.blogPosts[this.currentPage]
+    .forEach(post => post.isFav = true);
+  }
+
+  //Top level component
+  favoriteTopAll(){
+    this.blogPosts[this.currentPage] =
+      this.blogPosts[this.currentPage]
+      .map(post => ({
+        title: post.title,
+        summary: post.summary,
+        isFav: true
+      }));
+  }
+
 }

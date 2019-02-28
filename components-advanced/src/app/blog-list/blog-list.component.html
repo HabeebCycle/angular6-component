@@ -1,4 +1,5 @@
 <a class="btn btn-info btn-sm pull-right" (click)="expandAllTiles()">Expand All</a>
+<a class="btn btn-info" (click)="favoriteAll()">Favourite All</a>
 
 <app-blog-post-tile
   #tiles
@@ -7,3 +8,8 @@
 </app-blog-post-tile>
 <br/>
 <app-paginator [numberOfPages]="blogPosts.length" (pageNumberClick)="setCurrentPage($event)"></app-paginator>
+
+<app-card>
+  <h1>Headings</h1>
+  <p>Paragraph content goes here...</p>
+</app-card>
